@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="AAK">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://aakwife.aak.lovelin.asia/2023/08/08/明日方舟之修改立绘/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="明日方舟の立绘修改先决条件 电脑一台 系统Windows   手一双 脑子一个   准备材料： 明日方舟apk一个 建议使用Q群234334714群文件内的明日方舟，其余版本暂未测试方法可能略有出入   Apktool.jar 解包和打包APK   AssetStudio.net6.v0.16.47 导出AssesBundle内所需文件   Unity AssetBundleExtractor 将">
+<meta property="og:type" content="article">
+<meta property="og:title" content="明日方舟之修改立绘">
+<meta property="og:url" content="http://aakwife.aak.lovelin.asia/2023/08/08/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E4%B9%8B%E4%BF%AE%E6%94%B9%E7%AB%8B%E7%BB%98/">
+<meta property="og:site_name" content="AAK&#39;s Home">
+<meta property="og:description" content="明日方舟の立绘修改先决条件 电脑一台 系统Windows   手一双 脑子一个   准备材料： 明日方舟apk一个 建议使用Q群234334714群文件内的明日方舟，其余版本暂未测试方法可能略有出入   Apktool.jar 解包和打包APK   AssetStudio.net6.v0.16.47 导出AssesBundle内所需文件   Unity AssetBundleExtractor 将">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awoor.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awmsi.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awoew.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awmks.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awoe1.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awnq8.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awnk2.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awol3.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awnwi.png">
+<meta property="og:image" content="http://106.52.208.142:8654/i/2023/08/08/7awsso.jpeg">
+<meta property="article:published_time" content="2023-08-07T20:25:45.000Z">
+<meta property="article:modified_time" content="2023-09-25T14:33:16.295Z">
+<meta property="article:author" content="AAK">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://106.52.208.142:8654/i/2023/08/08/7awoor.png">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/ao7zz-mvroo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/ao7zz-mvroo.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/ao7zz-mvroo.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            明日方舟之修改立绘 -
+        
+        AAK&#39;s Home
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"aakwife.aak.lovelin.asia","root":"/","language":"en","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"AAK's Home","subtitle":{"text":["AAK is my wife!!!"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":null,"email":"3362392655@qq.com","bilibili":"https://space.bilibili.com/1792275843"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"忘川彼岸","artist":"AAK;Hung","url":"http://106.52.208.142:45652/a.mp3","cover":"http://106.52.208.142:45652/a.png"},{"name":"失眠飞行","artist":"AAK;Hung","url":"http://106.52.208.142:45652/b.mp3","cover":"http://106.52.208.142:45652/b.jpg"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.4.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="http://aakwife.aak.lovelin.asia/">
+                
+                AAK&#39;s Home
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">明日方舟之修改立绘</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/ao7zz-mvroo.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">AAK</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-08-08 04:25:45</span>
+        <span class="mobile">2023-08-08 04:25:45</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-09-25 22:33:16</span>
+            <span class="mobile">2023-09-25 22:33:16</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>732 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>2 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h1 id="明日方舟の立绘修改"><a href="#明日方舟の立绘修改" class="headerlink" title="明日方舟の立绘修改"></a>明日方舟の立绘修改</h1><h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
+<li>电脑一台<ul>
+<li>系统Windows</li>
+</ul>
+</li>
+<li>手一双</li>
+<li>脑子一个</li>
+</ul>
+<hr>
+<h2 id="准备材料："><a href="#准备材料：" class="headerlink" title="准备材料："></a>准备材料：</h2><ul>
+<li>明日方舟apk一个<ul>
+<li>建议使用Q群234334714群文件内的明日方舟，其余版本暂未测试方法可能略有出入</li>
+</ul>
+</li>
+<li>Apktool.jar<ul>
+<li>解包和打包APK</li>
+</ul>
+</li>
+<li>AssetStudio.net6.v0.16.47<ul>
+<li>导出AssesBundle内所需文件</li>
+</ul>
+</li>
+<li>Unity AssetBundleExtractor<ul>
+<li>将改好的文件导入AssesBundle</li>
+</ul>
+</li>
+<li>Photoshop<ul>
+<li>图片修改</li>
+</ul>
+</li>
+<li>JAVA1.8以上</li>
+</ul>
+<hr>
+<h2 id="解包明日方舟APK"><a href="#解包明日方舟APK" class="headerlink" title="解包明日方舟APK"></a>解包明日方舟APK</h2><p>在Apktool.jar目录下打开cmd窗口，输入：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">java -jar apktool.jar<br></code></pre></td></tr></table></figure></div>
+<p>命令解释：d是解包，-r指不解包resources，z.apk替换为明日方舟apk的路径</p>
+<p>在解包出来的文件夹下，打开干员目录<br>Xxx→assets→AB→Android→charpack</p>
+<ul>
+<li>当文件夹内为char_xxx_xxx.ab文件时即为正确</li>
+</ul>
+<hr>
+<h2 id="导出立绘"><a href="#导出立绘" class="headerlink" title="导出立绘"></a>导出立绘</h2><p>找到你想要修改的干员，例如阿（char_225_haak.ab）</p>
+<p>然后打开AssetStudio，依次选择File→Load File，然后打开你想要修改的干员的ab包文件<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awoor.png"
+                      alt="AssetStudio首页"
+                ></p>
+<p>打开Filter Type，选择Texture2D<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awmsi.png"
+                      alt="AssetStudio Filter Type"
+                ></p>
+<p>找到char_225_haak_1和char_225_haak_1[alpha]</p>
+<p>Ctrl+左键选中，然后右键选择Export xxxxxxx，随后随便选择一个文件夹导出<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awoew.png"
+                      alt="导出char_225_1和char_225_haak_1[alpha]"
+                ></p>
+<p>打开PhotoShop，将图片与导出图片等比例对齐<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awmks.png"
+                      alt="PS1"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awoe1.png"
+                      alt="PS2"
+                ></p>
+<p>成品如上，大小限制为1024x1024</p>
+<p>修改好后，将白背景的名字修改为char_225_haak_1并导出为PNG格式，黑背景的名字修改为char_225_haak_1[alpha]并导出为PNG格式。</p>
+<hr>
+<h2 id="修改ab包"><a href="#修改ab包" class="headerlink" title="修改ab包"></a>修改ab包</h2><p>打开UABE（Unity Asset Bundle Extractor）</p>
+<p>依次选择文件→打开，然后打开想要修改的角色的ab包。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awnq8.png"
+                      alt="UABE1"
+                ><br>在弹出的窗口中选择是，然后将文件名修改为a1</p>
+<p>选择信息，在弹出的窗口中找到char_225_haak_1和char_225_haak_1[alpha]，先选中其中一个!</p>
+<p>在右侧选择插件，在弹出的窗口中选择Edit<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awnk2.png"
+                      alt="Edit"
+                ></p>
+<p>打开Load，选择对应的文件，char_225_haak_1就选择char_225_haak_1.png，以此类推<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awol3.png"
+                      alt="Load"
+                ></p>
+<p>选好后选择OK，在弹出的窗口中选择Fast，然后点OK，文件就成功导入进去啦。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awnwi.png"
+                      alt="Fast"
+                ></p>
+<p>char_225_haak_1[alpha]同上。</p>
+<p>当两个文件全部替换好后点最底下的确定，保存更改，并将其命名为char_225_haak.ab</p>
+<hr>
+<h2 id="APK重打包"><a href="#APK重打包" class="headerlink" title="APK重打包"></a>APK重打包</h2><p>将改好的ab包替换掉反编译apk中的ab包<br>随后返回到apktool.jar的目录下，打开cmd，输入</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs plaintext">java -jar apktool.jar b z<br></code></pre></td></tr></table></figure></div>
+
+<p>命令解释：b为重打包，z为反编译出来的文件的文件夹</p>
+<p>最后，安安静静地饮饮茶，看看书，等apktool自动打包完</p>
+<h2 id="apk签名"><a href="#apk签名" class="headerlink" title="apk签名"></a>apk签名</h2><p>这里推荐用apksinger，关于签名就不展开来讲了。</p>
+<hr>
+<p>Apk签名完后就可以安装到模拟器或者发送到手机上安装打开</p>
+<p>当你找到修改的角色（阿）的原皮肤时，就可以看到角色的立绘已经被完美替换掉了。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awsso.jpeg"
+                      alt="成品图"
+                ></p>
+<hr>
+<h3 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h3><p>本教程仅限于群文件中的APK，对官服的apk不建议替换，会有封号的风险（应该）</p>
+<p>总之，官服的改别怕，怕别改，本地服就随便啦~</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 明日方舟之修改立绘</li>
+        <li><strong>Author:</strong> AAK</li>
+        <li><strong>Created at
+                :</strong> 2023-08-08 04:25:45</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-09-25 22:33:16
+            </li>
+        
+        <li>
+            <strong>Link:</strong> http://aakwife.aak.lovelin.asia/2023/08/08/明日方舟之修改立绘/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                        rel="prev"
+                        href="/2023/09/29/%E6%B5%85%E8%B0%88So-VITS-SVC/"
+                        >
+                            <span class="left arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">浅谈So-VITS-SVC</span>
+                                <span class="post-nav-item">Prev posts</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/08/08/ChatGPT%E7%9A%84%E5%8F%AF%E7%94%A8%E9%82%AE%E7%AE%B1/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">ChatGPT的可用邮箱</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://www.lovelin.asia/',
+                lang: 'en-US',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">明日方舟之修改立绘</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E3%81%AE%E7%AB%8B%E7%BB%98%E4%BF%AE%E6%94%B9"><span class="nav-text">明日方舟の立绘修改</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%88%E5%86%B3%E6%9D%A1%E4%BB%B6"><span class="nav-text">先决条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E6%9D%90%E6%96%99%EF%BC%9A"><span class="nav-text">准备材料：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%8C%85%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9FAPK"><span class="nav-text">解包明日方舟APK</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E7%AB%8B%E7%BB%98"><span class="nav-text">导出立绘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9ab%E5%8C%85"><span class="nav-text">修改ab包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#APK%E9%87%8D%E6%89%93%E5%8C%85"><span class="nav-text">APK重打包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#apk%E7%AD%BE%E5%90%8D"><span class="nav-text">apk签名</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="nav-text">碎碎念</span></a></li></ol></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">AAK</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.4.4</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex justify-center items-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+        ],
+        containers: ["#swup"],
+    });
+
+    swup.hooks.on("page:view", () => {
+        Global.refresh();
+    });
+
+    // if (document.readyState === "complete") {
+    //
+    // } else {
+    //     document.addEventListener("DOMContentLoaded", () => init());
+    // }
+</script>
+
+
+
+
+
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Hexo Theme Redefine">
+    
+    <meta name="author" content="AAK">
+    <!-- preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!--- Seo Part-->
+    
+    <link rel="canonical" href="http://aakwife.aak.lovelin.asia/2023/09/29/浅谈so-vits-svc/"/>
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="1 days">
+    
+        <meta name="description" content="So-VITS-SVC简介什么是So-VITS-SVC？ 从名字就看得出来，So-vits-svc(SoftVC VITS Singing Voice Conversion)是基于VITS的开源项目，VITS（Variational Inference with adversarial learning for end-to-end Text-to-Speech）是一种结合变分推理（variati">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈So-VITS-SVC">
+<meta property="og:url" content="http://aakwife.aak.lovelin.asia/2023/09/29/%E6%B5%85%E8%B0%88So-VITS-SVC/">
+<meta property="og:site_name" content="AAK&#39;s Home">
+<meta property="og:description" content="So-VITS-SVC简介什么是So-VITS-SVC？ 从名字就看得出来，So-vits-svc(SoftVC VITS Singing Voice Conversion)是基于VITS的开源项目，VITS（Variational Inference with adversarial learning for end-to-end Text-to-Speech）是一种结合变分推理（variati">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-09-29T04:57:59.000Z">
+<meta property="article:modified_time" content="2023-09-29T08:37:14.086Z">
+<meta property="article:author" content="AAK">
+<meta property="article:tag" content="杂谈系列">
+<meta name="twitter:card" content="summary">
+    
+    
+    <!--- Icon Part-->
+    <link rel="icon" type="image/png" href="/images/ao7zz-mvroo.svg" sizes="192x192">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/ao7zz-mvroo.svg">
+    <meta name="theme-color" content="#A31F34">
+    <link rel="shortcut icon" href="/images/ao7zz-mvroo.svg">
+    <!--- Page Info-->
+    
+    <title>
+        
+            浅谈So-VITS-SVC -
+        
+        AAK&#39;s Home
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+        
+<link rel="stylesheet" href="/css/build/styles.css">
+
+    
+
+    
+<link rel="stylesheet" href="/fonts/fonts.css">
+
+    
+<link rel="stylesheet" href="/fonts/Satoshi/satoshi.css">
+
+    
+<link rel="stylesheet" href="/fonts/Chillax/chillax.css">
+
+    <!--- Font Part-->
+    
+    
+    
+    
+
+    <!--- Inject Part-->
+    
+    <script id="hexo-configurations">
+    let Global = window.Global || {};
+    Global.hexo_config = {"hostname":"aakwife.aak.lovelin.asia","root":"/","language":"en","path":"search.xml"};
+    Global.theme_config = {"articles":{"style":{"font_size":"16px","line_height":1.5,"image_border_radius":"14px","image_alignment":"center","image_caption":false,"link_icon":true},"word_count":{"enable":true,"count":true,"min2read":true},"author_label":{"enable":true,"auto":false,"list":[]},"code_block":{"copy":true,"style":"mac","font":{"enable":false,"family":null,"url":null}},"toc":{"enable":true,"max_depth":3,"number":false,"expand":true,"init_open":true},"copyright":true,"lazyload":true,"recommendation":{"enable":false,"title":"推荐阅读","limit":3,"mobile_limit":2,"placeholder":"/images/wallhaven-wqery6-light.webp","skip_dirs":[]}},"colors":{"primary":"#A31F34","secondary":null},"global":{"fonts":{"chinese":{"enable":false,"family":null,"url":null},"english":{"enable":false,"family":null,"url":null}},"content_max_width":"1000px","sidebar_width":"210px","hover":{"shadow":true,"scale":false},"scroll_progress":{"bar":false,"percentage":true},"website_counter":{"url":"https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js","enable":true,"site_pv":true,"site_uv":true,"post_pv":true},"single_page":true,"open_graph":true,"google_analytics":{"enable":false,"id":null}},"home_banner":{"enable":true,"style":"fixed","image":{"light":"/images/wallhaven-wqery6-light.webp","dark":"/images/wallhaven-wqery6-dark.webp"},"title":"AAK's Home","subtitle":{"text":["AAK is my wife!!!"],"hitokoto":{"enable":false,"api":"https://v1.hitokoto.cn"},"typing_speed":100,"backing_speed":80,"starting_delay":500,"backing_delay":1500,"loop":true,"smart_backspace":true},"text_color":{"light":"#fff","dark":"#d1d1b6"},"text_style":{"title_size":"2.8rem","subtitle_size":"1.5rem","line_height":1.2},"custom_font":{"enable":false,"family":null,"url":null},"social_links":{"enable":true,"links":{"github":null,"email":"3362392655@qq.com","bilibili":"https://space.bilibili.com/1792275843"},"qrs":{"weixin":null}}},"plugins":{"feed":{"enable":false},"aplayer":{"enable":true,"type":"fixed","audios":[{"name":"忘川彼岸","artist":"AAK;Hung","url":"http://106.52.208.142:45652/a.mp3","cover":"http://106.52.208.142:45652/a.png"},{"name":"失眠飞行","artist":"AAK;Hung","url":"http://106.52.208.142:45652/b.mp3","cover":"http://106.52.208.142:45652/b.jpg"}]},"mermaid":{"enable":false,"version":"9.3.0"}},"version":"2.4.4","navbar":{"auto_hide":false,"color":{"left":"#f78736","right":"#367df7","transparency":35},"links":{"Home":{"path":"/","icon":"fa-regular fa-house"}},"search":{"enable":true,"preload":true}},"page_templates":{"friends_column":2,"tags_style":"blur"},"home":{"sidebar":{"enable":true,"position":"left","first_item":"menu","announcement":null,"links":{"Archives":{"path":"/archives","icon":"fa-regular fa-archive"}}},"article_date_format":"auto","categories":{"enable":true,"limit":3},"tags":{"enable":true,"limit":3}},"footerStart":"2022/8/17 11:45:14"};
+    Global.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+    Global.data_config = {"masonry":false};
+  </script>
+    
+    <!--- Fontawesome Part-->
+    
+<link rel="stylesheet" href="/fontawesome/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/brands.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/solid.min.css">
+
+    
+<link rel="stylesheet" href="/fontawesome/regular.min.css">
+
+    
+    
+    
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="swup-progress-icon">
+            <i class="fa-solid fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container" id="swup">
+
+    
+
+    <div class="main-content-container">
+
+
+        <div class="main-content-header">
+            <header class="navbar-container">
+    
+    <div class="navbar-content">
+        <div class="left">
+            
+            <a class="logo-title" href="http://aakwife.aak.lovelin.asia/">
+                
+                AAK&#39;s Home
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="desktop">
+                <ul class="navbar-list">
+                    
+                        
+                            <li class="navbar-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="navbar-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item navbar-bar">
+                    <div class="navbar-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="navbar-drawer w-full absolute top-0 left-0 bg-background-color">
+        <ul class="drawer-navbar-list flex flex-col justify-start items-center">
+            
+                
+                    <li class="drawer-navbar-item text-base my-1.5 flex justify-center items-center">
+                        <a class="rounded-3xl py-1.5 px-5 hover:border hover:!text-primary active:!text-primary group " 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="main-content-body">
+
+            
+
+            <div class="main-content">
+
+                
+                    <div class="post-page-container">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            
+                <h1 class="article-title-regular">浅谈So-VITS-SVC</h1>
+            
+            </div>
+            
+                    
+        
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/ao7zz-mvroo.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">AAK</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-09-29 12:57:59</span>
+        <span class="mobile">2023-09-29 12:57:59</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-09-29 16:37:14</span>
+            <span class="mobile">2023-09-29 16:37:14</span>
+            <span class="hover-info">Updated</span>
+        </span>
+    
+
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%9D%82%E8%B0%88%E7%B3%BB%E5%88%97/">杂谈系列</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>1.6k Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>5 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        
+
+
+        <div class="article-content markdown-body">
+            <h1 id="So-VITS-SVC简介"><a href="#So-VITS-SVC简介" class="headerlink" title="So-VITS-SVC简介"></a>So-VITS-SVC简介</h1><h2 id="什么是So-VITS-SVC？"><a href="#什么是So-VITS-SVC？" class="headerlink" title="什么是So-VITS-SVC？"></a>什么是So-VITS-SVC？</h2><p> 从名字就看得出来，So-vits-svc(SoftVC VITS Singing Voice Conversion)是基于VITS的开源项目，VITS（Variational Inference with adversarial learning for end-to-end Text-to-Speech）是一种结合变分推理（variational inference）、标准化流（normalizing flows）和对抗训练的高表现力语音合成模型</p>
+<details class="blue" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>与VITS同源的除了So-VITS-SVC,还有RVC </summary>
+              <div class='content'>
+              <div class="note tip"><p>RVC也就是我们平常说的实时变声器中的一种，可以理解为实时推理的SVC，也因此，他对硬件要求更高  </p></div>
+              </div>
+            </details>
+<hr>
+<h2 id="运行配置"><a href="#运行配置" class="headerlink" title="运行配置"></a>运行配置</h2><h3 id="最低配置"><a href="#最低配置" class="headerlink" title="最低配置"></a>最低配置</h3><p>显卡：独立显存大于或等于6G</p>
+<p>CPU：能用就行</p>
+<p>内存：4G及以上</p>
+<h3 id="推荐配置"><a href="#推荐配置" class="headerlink" title="推荐配置"></a>推荐配置</h3><p>显卡：独立显存16G及以上</p>
+<p>CPU：i5 12400f</p>
+<p>内存：8G及以上</p>
+<p>显然，SO-VITS-SVC对于硬件最大的要求就是显卡的显存，理论上，只要有一张好卡，CPU从路边捡一个来用都能跑….</p>
+<hr>
+<h1 id="警告！！！"><a href="#警告！！！" class="headerlink" title="警告！！！"></a>警告！！！</h1><p>由于So-VITS-SVC使用的是Pytorch环境，所以…</p>
+<p>CUDA版本不能超过12.0！<br>CUDA版本不能超过12.0！<br>CUDA版本不能超过12.0！</p>
+<p>这是很多人都会犯的一个错误，现在当我们去安装N卡驱动时，都会自带一个CUDA12.3,使用了这个版本的CUDA后显卡是 不 能 用于训练模型与推理的，PyTorch会认不出来你的显卡，在So-VITS-SVC眼中，你 是 没 有 显 卡 的。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><blockquote>
+<p>卸载掉已经安装好的显卡驱动，然后在<a class="link"   target="_blank" rel="noopener" href="https://pytorch.org/?ref=blog.illacloud.com" >PyTorch官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>找到对应的版本并下载安装，CUDA版本要和Torch版本相匹配。</p>
+<blockquote>
+<p>根据你所选择的Torch版本，下载对应的CUDA驱动，建议选择联网下载版本的安装包，CUDA会自带显卡驱动</p>
+</blockquote>
+</blockquote>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>当你手动安装了PyTorch后，请将你的requirements.txt（或者requirements_win.txt）中与PyTorch相关的项删除，然后再<code>pip install -r requirements.txt</code></p>
+<p>若是已经用了requirements.txt中的PyTorch，那么请确保你的CUDA版本与PyTorch版本对应。</p>
+<hr>
+<h1 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h1><h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><h2 id="在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）"><a href="#在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）" class="headerlink" title="在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）"></a>在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）</h2><h2 id="数据集的准备"><a href="#数据集的准备" class="headerlink" title="数据集的准备"></a>数据集的准备</h2><p>数据集总时长最好是在1h+，内容 <em>必须</em> 是干净无污染的人声。建议在准备数据集的时候，应该注意一下不同音域之间的时长——若是完全没有高音&#x2F;低音的数据集，那么训练出来的模型效果也会非常糟糕</p>
+<details class="red" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>请注意： </summary>
+              <div class='content'>
+              <ol><li>不允许使用 <em>非授权数据集</em> 进行训练，由 <em>非授权数据集</em> 数据集引起的问题需自行承担全部责任和后果！与仓库、仓库维护者、svc develop team 无关！</li><li>任何发布到视频平台的基于 sovits 制作的视频，都必须要在简介明确指明用于变声器转换的输入源歌声、音频，例如：使用他人发布的视频 &#x2F; 音频，通过分离的人声作为输入源进行转换的，必须要给出明确的原视频、音乐链接；若使用是自己的人声，或是使用其他歌声合成引擎合成的声音作为输入源进行转换的，也必须在简介加以说明。</li><li>由输入源造成的侵权问题需自行承担全部责任和一切后果。使用其他商用歌声合成软件作为输入源时，请确保遵守该软件的使用条例，注意，许多歌声合成引擎使用条例中明确指明不可用于输入源进行转换！</li><li>禁止使用该项目从事违法行为与宗教、政治等活动，该项目维护者坚决抵制上述行为，不同意此条则禁止使用该项目。</li></ol>
+              </div>
+            </details>
+<h3 id="恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半"><a href="#恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半" class="headerlink" title="恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半"></a>恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半</h3><h1 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h1><h2 id="开启TensorBoard面板"><a href="#开启TensorBoard面板" class="headerlink" title="开启TensorBoard面板"></a>开启TensorBoard面板</h2><ol>
+<li>安装TensorBoar<code>pip install tensorboard</code></li>
+<li>在so-vits-svc项目文件夹打开cmd，输入<code>tensorboard --logdir=&quot;logs/44k/</code></li>
+<li>当显示 <code>Serving TensorBoard on localhost; to expose to the network, use a proxy or pass –bind_allTensorBoard 2.2.0 at http://localhost:（端口号）/ (Press CTRL+C to quit)</code><br>时，用浏览器打开 <a href="http://localhost:（端口号）">http://localhost:（端口号）</a> 即可</li>
+</ol>
+<h2 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h2><p>如何判断我们的模型是否过拟合了呢？</p>
+<p>在TensorBoard面板中：</p>
+<p>如果模型在训练集上表现很好，但在验证集上表现很差，那么很有可能模型出现了过拟合。</p>
+<h3 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h3><p>目前So-VITS-SVC并没有较为完善的解决办法，最好的结果便是模型能够自己跳出来，最坏的结果嘛…寄</p>
+<h2 id="all-in-mem"><a href="#all-in-mem" class="headerlink" title="all_in_mem"></a>all_in_mem</h2><p>这个选项在configs&#x2F;config.json文件中，默认是关闭的，若是自身电脑配置不算好的话强烈建议开启</p>
+<h2 id="训练步数"><a href="#训练步数" class="headerlink" title="训练步数"></a>训练步数</h2><p>模型并不是步数越高越好，太高的步数很可能就会造成过拟合这一惨状。如果步数太低，则训练出来的模型就不太像了。</p>
+<h1 id="音频推理"><a href="#音频推理" class="headerlink" title="音频推理"></a>音频推理</h1><p>在推理歌曲时，咱要注意一下以下选项：</p>
+<ol>
+<li>‘–model_path’ 模型文件路径</li>
+<li>‘–config_path’ 配置文件路径（logs文件夹下的）</li>
+<li>‘–clean_names’ 将要推理的歌曲文件，放在raw文件夹下（最好是wav格式，若是其他格式则需要配合ffmpeg）</li>
+<li>‘–spk_list’ 模型的说话人</li>
+<li>‘–clip’ 音频自动切片，单位s，低配置用户福音</li>
+<li>‘–device’ 推理设备选择，可用’cpu’或者’cuda’(显卡)</li>
+<li>‘–f0_predictor’ f0预测器选择，若推理的音频没有受到任何污染的话rmvpe最佳，若是有轻污染则使用crepe</li>
+</ol>
+<h2 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h2><p>输入源（推理的音频）同样需要遵守 <em>版权规则</em></p>
+<p>在选择输入源时，我们也应该注意以下几点：</p>
+<ol>
+<li>有明显混音、和声的人声不建议使用</li>
+<li>合唱歌曲，尤其是男女合唱的，请慎重使用</li>
+<li>过于高音&#x2F;低音的不建议使用，如果非要使用还请自行调整好音频的音高</li>
+</ol>
+<p>并不是每一次推理都能够得到非常好的效果，所以就需要发挥我们的后期才能了，这里就不过多赘述。</p>
+
+        </div>
+
+        
+            <div class="post-copyright-info">
+                <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> 浅谈So-VITS-SVC</li>
+        <li><strong>Author:</strong> AAK</li>
+        <li><strong>Created at
+                :</strong> 2023-09-29 12:57:59</li>
+        
+            <li>
+                <strong>Updated at
+                    :</strong> 2023-09-29 16:37:14
+            </li>
+        
+        <li>
+            <strong>Link:</strong> http://aakwife.aak.lovelin.asia/2023/09/29/浅谈So-VITS-SVC/
+        </li>
+        <li>
+            <strong>
+                License:
+            </strong>
+            
+            This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+            
+
+        </li>
+    </ul>
+</div>
+
+            </div>
+        
+
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/%E6%9D%82%E8%B0%88%E7%B3%BB%E5%88%97/">#杂谈系列</a>&nbsp;
+                    </li>
+                
+            </ul>
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                        rel="next"
+                        href="/2023/08/08/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E4%B9%8B%E4%BF%AE%E6%94%B9%E7%AB%8B%E7%BB%98/"
+                        >
+                            <span class="title flex justify-center items-center">
+                                <span class="post-nav-title-item">明日方舟之修改立绘</span>
+                                <span class="post-nav-item">Next posts</span>
+                            </span>
+                            <span class="right arrow-icon flex justify-center items-center">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+
+        
+            <div class="comment-container">
+                <div class="comments-container pjax">
+    <div id="comment-anchor"></div>
+    <div class="comment-area-title">
+        <i class="fa-solid fa-comments"></i>&nbsp;Comments
+    </div>
+    
+
+        
+            
+ 
+    <div id="waline"></div>
+    <script type="module"  data-swup-reload-script>
+        import { init } from 'https://evan.beee.top/js/waline.mjs';
+
+        function loadWaline() {
+            init({
+                el: '#waline',
+                serverURL: 'https://www.lovelin.asia/',
+                lang: 'en-US',
+                dark: 'body[class~="dark-mode"]',
+                requiredMeta: ['nick','mail'], // cannot customize by theme config, change it yourself
+            });
+        }
+
+        if ('true') {
+            const loadWalineTimeout = setTimeout(() => {
+                loadWaline();
+                clearTimeout(loadWalineTimeout);
+            }, 1000);
+        } else {
+            window.addEventListener('DOMContentLoaded', loadWaline);
+        }
+        
+    </script>
+
+
+
+        
+    
+</div>
+
+            </div>
+        
+    </div>
+
+    
+        <div class="toc-content-container">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">浅谈So-VITS-SVC</div>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#So-VITS-SVC%E7%AE%80%E4%BB%8B"><span class="nav-text">So-VITS-SVC简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFSo-VITS-SVC%EF%BC%9F"><span class="nav-text">什么是So-VITS-SVC？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E9%85%8D%E7%BD%AE"><span class="nav-text">运行配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%80%E4%BD%8E%E9%85%8D%E7%BD%AE"><span class="nav-text">最低配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%85%8D%E7%BD%AE"><span class="nav-text">推荐配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AD%A6%E5%91%8A%EF%BC%81%EF%BC%81%EF%BC%81"><span class="nav-text">警告！！！</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95"><span class="nav-text">解决办法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">注意事项</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE"><span class="nav-text">使用建议</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%9D%E8%B5%96%E5%AE%89%E8%A3%85"><span class="nav-text">依赖安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E5%AE%89%E8%A3%85So-VITS-SVC%E7%9A%84%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E6%97%B6%EF%BC%8C%E6%88%91%E5%BC%BA%E7%83%88%E5%BB%BA%E8%AE%AE%E4%BD%A0%E4%BD%BF%E7%94%A8Conda%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83%EF%BC%8C%E8%83%BD%E5%A4%9F%E6%9C%89%E6%95%88%E9%81%BF%E5%85%8D%E5%A4%A7%E9%83%A8%E5%88%86%E4%BE%9D%E8%B5%96%E4%B9%8B%E9%97%B4%E7%9A%84%E5%86%B2%E7%AA%81%EF%BC%88%E5%88%92%E9%87%8D%E7%82%B9%EF%BC%89"><span class="nav-text">在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%87%86%E5%A4%87"><span class="nav-text">数据集的准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%81%AD%E5%96%9C%E4%BD%A0%EF%BC%8C%E5%A6%82%E6%9E%9C%E5%88%B0%E4%BA%86%E8%BF%99%E9%87%8C%E8%BF%98%E6%B2%A1%E6%9C%89%E5%87%BA%E7%8E%B0%E4%BB%80%E4%B9%88%E5%A4%A7%E9%97%AE%E9%A2%98%E7%9A%84%E8%AF%9D%EF%BC%8C%E9%82%A3%E4%B9%88%E4%BD%A0%E7%9A%84So-VITS-SVC%E4%B9%8B%E6%97%85%E5%B7%B2%E7%BB%8F%E5%AE%8C%E6%88%90%E4%BA%86%E4%B8%80%E5%8D%8A"><span class="nav-text">恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A8%A1%E5%9E%8B%E8%AE%AD%E7%BB%83"><span class="nav-text">模型训练</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%90%AFTensorBoard%E9%9D%A2%E6%9D%BF"><span class="nav-text">开启TensorBoard面板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%8B%9F%E5%90%88"><span class="nav-text">过拟合</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95-1"><span class="nav-text">解决办法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#all-in-mem"><span class="nav-text">all_in_mem</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E6%AD%A5%E6%95%B0"><span class="nav-text">训练步数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9F%B3%E9%A2%91%E6%8E%A8%E7%90%86"><span class="nav-text">音频推理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9-1"><span class="nav-text">注意事项</span></a></li></ol></li></ol>
+
+    </div>
+</div>
+        </div>
+    
+</div>
+
+
+
+                
+
+            </div>
+
+            
+
+        </div>
+
+        <div class="main-content-footer">
+            <footer class="footer mt-5 py-5 h-auto text-base text-third-text-color relative border-t-2 border-t-border-color">
+    <div class="info-container py-3 text-center">
+        
+        <div class="text-center">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2023&nbsp;&nbsp;<i class="fa-solid fa-heart fa-beat" style="--fa-animation-duration: 0.5s; color: #f54545"></i>&nbsp;&nbsp;<a href="/">AAK</a>
+        </div>
+        
+            <script data-swup-reload-script src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="relative text-center lg:absolute lg:right-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-right">
+                
+                    <span id="busuanzi_container_site_uv" class="lg:!block">
+                        <span class="text-sm">VISITOR COUNT</span>
+                        <span id="busuanzi_value_site_uv"></span>
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv" class="lg:!block">
+                        <span class="text-sm">TOTAL PAGE VIEWS</span>
+                        <span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="relative text-center lg:absolute lg:left-[20px] lg:top-1/2 lg:-translate-y-1/2 lg:text-left">
+            <span class="lg:block text-sm">POWERED BY <?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg class="relative top-[2px] inline-block align-baseline" version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1rem" height="1rem" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve"><path fill="#0E83CD" d="M256.4,25.8l-200,115.5L56,371.5l199.6,114.7l200-115.5l0.4-230.2L256.4,25.8z M349,354.6l-18.4,10.7l-18.6-11V275H200v79.6l-18.4,10.7l-18.6-11v-197l18.5-10.6l18.5,10.8V237h112v-79.6l18.5-10.6l18.5,10.8V354.6z"/></svg><a target="_blank" class="text-base" href="https://hexo.io">Hexo</a></span>
+            <span class="text-sm lg:block">THEME&nbsp;<a class="text-base" target="_blank" href="https://github.com/EvanNotFound/hexo-theme-redefine">Redefine v2.4.4</a></span>
+        </div>
+        
+        
+            <div>
+                Blog up for <span class="odometer" id="runtime_days" ></span> days <span class="odometer" id="runtime_hours"></span> hrs <span class="odometer" id="runtime_minutes"></span> Min <span class="odometer" id="runtime_seconds"></span> Sec
+            </div>
+        
+        
+            <script data-swup-reload-script>
+                try {
+                    function odometer_init() {
+                    const elements = document.querySelectorAll('.odometer');
+                    elements.forEach(el => {
+                        new Odometer({
+                            el,
+                            format: '( ddd).dd',
+                            duration: 200
+                        });
+                    });
+                    }
+                    odometer_init();
+                } catch (error) {}
+            </script>
+        
+        
+        
+    </div>  
+</footer>
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+            <li class="go-comment">
+                <i class="fa-regular fa-comments"></i>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-side-tools-container">
+        <div class="side-tools-container">
+    <ul class="hidden-tools-list">
+        <li class="right-bottom-tools tool-font-adjust-plus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-plus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-font-adjust-minus flex justify-center items-center">
+            <i class="fa-regular fa-magnifying-glass-minus"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-expand-width flex justify-center items-center">
+            <i class="fa-regular fa-expand"></i>
+        </li>
+
+        <li class="right-bottom-tools tool-dark-light-toggle flex justify-center items-center">
+            <i class="fa-regular fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="right-bottom-tools tool-scroll-to-bottom flex justify-center items-center">
+            <i class="fa-regular fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="visible-tools-list">
+        <li class="right-bottom-tools toggle-tools-list flex justify-center items-center">
+            <i class="fa-regular fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="right-bottom-tools tool-scroll-to-top flex justify-center items-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+        
+    </ul>
+</div>
+
+    </div>
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fa-solid fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fa-solid fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fa-solid fa-spinner fa-spin-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+    
+<script src="/js/libs/Swup.min.js"></script>
+
+<script src="/js/libs/SwupSlideTheme.min.js"></script>
+
+<script src="/js/libs/SwupScriptsPlugin.min.js"></script>
+
+<script src="/js/libs/SwupProgressPlugin.min.js"></script>
+
+<script src="/js/libs/SwupScrollPlugin.min.js"></script>
+
+<script>
+    const swup = new Swup({
+        plugins: [
+            new SwupScriptsPlugin({
+                optin: true,
+            }),
+            new SwupProgressPlugin(),
+            new SwupScrollPlugin({
+                offset: 80,
+            }),
+            new SwupSlideTheme({
+                mainElement: ".main-content-body",
+            }),
+        ],
+        containers: ["#swup"],
+    });
+
+    swup.hooks.on("page:view", () => {
+        Global.refresh();
+    });
+
+    // if (document.readyState === "complete") {
+    //
+    // } else {
+    //     document.addEventListener("DOMContentLoaded", () => init());
+    // }
+</script>
+
+
+
+
+
+
+<script src="/js/utils.js" type="module"></script>
+
+<script src="/js/main.js" type="module"></script>
+
+<script src="/js/layouts/navbarShrink.js" type="module"></script>
+
+<script src="/js/tools/scrollTopBottom.js" type="module"></script>
+
+<script src="/js/tools/lightDarkSwitch.js" type="module"></script>
+
+<script src="/js/layouts/categoryList.js" type="module"></script>
+
+
+
+    
+<script src="/js/tools/localSearch.js"></script>
+
+
+
+
+    
+<script src="/js/tools/codeBlock.js"></script>
+
+
+
+
+    
+<script src="/js/layouts/lazyload.js"></script>
+
+
+
+
+    
+<script src="/js/tools/runtime.js"></script>
+
+    
+<script src="/js/libs/odometer.min.js"></script>
+
+    
+<link rel="stylesheet" href="/assets/odometer-theme-minimal.css">
+
+
+
+
+  
+<script src="/js/libs/Typed.min.js"></script>
+
+  
+<script src="/js/plugins/typed.js"></script>
+
+
+
+
+
+
+
+<div class="post-scripts" data-swup-reload-script>
+    
+        
+<script src="/js/libs/anime.min.js"></script>
+
+        
+<script src="/js/tools/tocToggle.js" type="module"></script>
+
+<script src="/js/layouts/toc.js" type="module"></script>
+
+<script src="/js/plugins/tabs.js" type="module"></script>
+
+    
+</div>
+
+
+    <div id="aplayer"></div>
+
+<script src="/js/libs/APlayer.min.js"></script>
+
+
+<script src="/js/plugins/aplayer.js"></script>
+
+
+</body>
+</html>

